@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photo Transform</title>
+  <title>Photo Transform Premium</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -14,37 +14,42 @@
       padding: 0;
     }
     h1 {
-      margin-top: 50px;
+      margin-top: 40px;
       font-size: 2em;
       color: #FFD700;
+      font-weight: bold;
     }
-    .btn {
-      display: inline-block;
+    input[type="file"] {
       margin-top: 20px;
-      padding: 12px 24px;
+      padding: 12px;
       background: #FFD700;
       color: black;
       font-weight: bold;
       border-radius: 8px;
-      text-decoration: none;
+      border: none;
+      cursor: pointer;
       transition: transform 0.2s;
     }
-    .btn:hover {
+    input[type="file"]:hover {
       transform: scale(1.1);
     }
     .examples {
       margin-top: 40px;
     }
+    .examples h2 {
+      color: #FFD700;
+    }
     .examples img {
       width: 200px;
       margin: 10px;
       border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,215,0,0.6);
     }
   </style>
 </head>
 <body>
   <h1>Transforme ta photo en style premium</h1>
-  <a href="#" class="btn">Téléverser une photo</a>
+  <input type="file" accept="image/*">
 
   <div class="examples">
     <h2>Exemples</h2>
