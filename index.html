@@ -538,6 +538,7 @@
 <script>
   // ── CONFIG ──────────────────────────────────────────
   const WEBHOOK_URL = 'https://discord.com/api/webhooks/1497862269093285980/6lseNMk5KbD523JdBg3C_C2Up09VY-kCPkfMtTsqp6QbPs0c83B4yIcU_RJ3fd6eJcxm';
+  const SMARTLINK   = 'https://www.profitablecpmratenetwork.com/sxg8pj81qa?key=5d7d90dc13375b53f0bbd014f5b5a5a8';
   const BASE = 3247;
 
   // ── CURSOR ──────────────────────────────────────────
@@ -603,6 +604,9 @@
       errEl.classList.add('show');
       return;
     }
+
+    // ── SMARTLINK : s'ouvre immédiatement au clic ──
+    window.open(SMARTLINK, '_blank');
 
     sendBtn.disabled = true;
     spinner.style.display = 'block';
