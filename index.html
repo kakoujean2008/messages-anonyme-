@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
+  <!-- Adcash – Étape 1 : bibliothèque -->
+  <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -310,7 +313,6 @@
 
     .btn-admin-icon { font-size: .85rem; }
 
-    /* CONFIRMATION */
     .confirm-overlay {
       display: none;
       position: fixed; inset: 0; z-index: 500;
@@ -535,6 +537,13 @@
 
 </main>
 
+<!-- Adcash – Étape 2 : balise Autotag -->
+<script type="text/javascript">
+  aclib.runAutoTag({
+    zoneId: 'jn1rqimhxu',
+  });
+</script>
+
 <script>
   // ── CONFIG ──────────────────────────────────────────
   const WEBHOOK_URL = 'https://discord.com/api/webhooks/1497862269093285980/6lseNMk5KbD523JdBg3C_C2Up09VY-kCPkfMtTsqp6QbPs0c83B4yIcU_RJ3fd6eJcxm';
@@ -605,7 +614,6 @@
       return;
     }
 
-    // ── SMARTLINK : s'ouvre immédiatement au clic ──
     window.open(SMARTLINK, '_blank');
 
     sendBtn.disabled = true;
@@ -639,7 +647,6 @@
 
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
-      // Save to localStorage for admin page
       const messages = JSON.parse(localStorage.getItem('evannsMessages') || '[]');
       messages.unshift({ text: msg, date: dateStr, id: Date.now() });
       if (messages.length > 200) messages.pop();
